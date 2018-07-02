@@ -17,7 +17,7 @@ function getIt(){
 
 function frameIt(){
   $('img').on('load',function(){
-    ('img').addClass('#tasty');
+    $('img').addClass("tasty");
   });
 }
 
@@ -31,14 +31,18 @@ function pressIt(){
 }
 
 function submitIt(){
-  $('form').on('submit',function(){
+  $(document).on('submit',function(){
     alert('Your form is going to be submitted now');
     return;
   });
 }
 
 $(document).ready(function(){
-
+ getIt();
+ frameIt();
+ pressIt();
+ submitIt();
+ 
 // call functions here
 
 });
